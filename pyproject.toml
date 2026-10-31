@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-pid-tuning"
+version = "0.1.0"
+description = "1D simulation environment for AI-driven PID tuning"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+tuning = ["cma>=3.3"]
+
+[tool.setuptools.packages.find]
+include = ["pid_env*"]
